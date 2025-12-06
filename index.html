@@ -1,135 +1,148 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Política de Privacidade – CelebrePlus</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
             color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: #6200ee;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         h1, h2 {
-            color: #333;
+            color: #444;
         }
-        h1 {
+        footer {
             text-align: center;
-        }
-        .date {
-            text-align: center;
+            margin: 30px 0;
             color: #777;
-            margin-bottom: 40px;
+        }
+        a {
+            color: #6200ee;
         }
     </style>
 </head>
 <body>
+
+<header>
     <h1>Política de Privacidade – CelebrePlus</h1>
-    <p>Última atualização: <span id="updateDate"></span></p>
+</header>
+
+<main>
+
+    <p><strong>Última atualização:</strong> <span id="updateDate"></span></p>
+
+    <h2>1. Introdução</h2>
+    <p>
+        O CelebrePlus é um aplicativo que permite criar listas de presentes 
+        para casamentos, chás de bebê, aniversários e outros eventos. 
+        Esta Política de Privacidade explica como coletamos, utilizamos 
+        e protegemos as informações fornecidas pelos usuários do aplicativo.
+    </p>
+
+    <h2>2. Informações coletadas</h2>
+    <p>Coletamos apenas informações necessárias para o funcionamento do aplicativo, incluindo:</p>
+    <ul>
+        <li>Nome e e-mail do anfitrião para criação da conta;</li>
+        <li>Dados do evento (nome, descrição e data);</li>
+        <li>Itens da lista de presentes, criados pelo anfitrião;</li>
+        <li>E-mail dos convidados que acessam a lista (quando aplicável);</li>
+        <li>Mensagens enviadas pelos convidados ao anfitrião;</li>
+        <li>Confirmação de seleção dos presentes pelos convidados.</li>
+    </ul>
+
+    <h2>3. Informações financeiras</h2>
+    <p>
+        Quando os convidados selecionam um presente, o aplicativo exibe um 
+        número PIX fornecido pelo anfitrião. 
+    </p>
+    <ul>
+        <li>O pagamento ocorre diretamente entre convidado e anfitrião.</li>
+        <li>O CelebrePlus <strong>não processa transações financeiras</strong>.</li>
+        <li>O CelebrePlus <strong>não armazena dados bancários</strong> dos usuários.</li>
+    </ul>
+
+    <h2>4. Como usamos as informações</h2>
+    <p>As informações coletadas são utilizadas exclusivamente para:</p>
+    <ul>
+        <li>Criar e gerenciar contas de anfitriões;</li>
+        <li>Permitir a criação e compartilhamento de listas de presentes;</li>
+        <li>Exibir informações da lista aos convidados;</li>
+        <li>Enviar mensagens entre convidados e anfitrião;</li>
+        <li>Garantir o funcionamento do aplicativo.</li>
+    </ul>
+
+    <h2>5. Compartilhamento de informações</h2>
+    <p>
+        Não vendemos, alugamos ou compartilhamos dados pessoais dos usuários 
+        com terceiros, exceto quando necessário para o funcionamento do app 
+        ou exigido por lei.
+    </p>
+
+    <h2>6. Segurança dos dados</h2>
+    <p>
+        Adotamos medidas de segurança padrão para proteger as informações 
+        dos usuários contra acesso não autorizado, alteração ou destruição.
+    </p>
+
+    <h2>7. Direitos do usuário</h2>
+    <p>Os usuários podem solicitar:</p>
+    <ul>
+        <li>Correção de dados;</li>
+        <li>Exclusão de conta;</li>
+        <li>Informações sobre os dados armazenados;</li>
+        <li>Cancelamento de compartilhamento do link da lista.</li>
+    </ul>
+    <p>Para exercer seus direitos, entre em contato pelo e-mail:</p>
+    <p><strong>apps.insilico@gmail.com</strong></p>
+
+    <h2>8. Alterações nesta Política de Privacidade</h2>
+    <p>
+        A política pode ser atualizada periodicamente. A data de “Última atualização” 
+        será automaticamente ajustada na parte superior desta página.
+    </p>
+
+    <h2>9. Contato</h2>
+    <p>Se você tiver dúvidas sobre esta Política de Privacidade, entre em contato:</p>
+    <p><strong>E-mail: apps.insilico@gmail.com</strong></p>
+
+</main>
+
+<footer>
+    &copy; <span id="year"></span> CelebrePlus – Todos os direitos reservados.
+</footer>
 
 <script>
+    // Data automática
     const today = new Date();
-    const formatted =
+    const formattedDate =
         String(today.getDate()).padStart(2, '0') + '/' +
         String(today.getMonth() + 1).padStart(2, '0') + '/' +
         today.getFullYear();
-    document.getElementById('updateDate').textContent = formatted;
+    document.getElementById('updateDate').textContent = formattedDate;
+
+    // Ano automático no rodapé
+    document.getElementById('year').textContent = today.getFullYear();
 </script>
-
-
-    <p>
-        Agradecemos por utilizar o <strong>CelebrePlus</strong> (“Aplicativo”, “nós”, “nosso”). 
-        Esta Política de Privacidade descreve como coletamos, usamos e protegemos suas informações ao utilizar nossos serviços.
-    </p>
-
-    <h2>1. Informações que Coletamos</h2>
-
-    <h3>1.1 Informações de Cadastro</h3>
-    <ul>
-        <li>Nome</li>
-        <li>E-mail</li>
-        <li>Senha (criptografada)</li>
-    </ul>
-
-    <h3>1.2 Informações do Evento (Anfitrião)</h3>
-    <ul>
-        <li>Nome e data do evento</li>
-        <li>Lista de presentes</li>
-        <li>Mensagens de convidados</li>
-        <li>Dados para geração de links de acesso</li>
-    </ul>
-
-    <h3>1.3 Informações de Interação (Convidados)</h3>
-    <ul>
-        <li>Presentes selecionados</li>
-        <li>Mensagens ao anfitrião</li>
-        <li>Confirmação de seleção de presente</li>
-    </ul>
-
-    <h3>1.4 Informações de Pagamento via PIX</h3>
-    <p>
-        O CelebrePlus <strong>não processa pagamentos</strong>. O convidado realiza o pagamento fora do app.
-        O aplicativo apenas exibe o número PIX do anfitrião.
-    </p>
-
-    <h3>1.5 Dados Técnicos</h3>
-    <p>
-        Coletamos dados técnicos necessários para funcionamento, como dispositivo e sistema operacional.
-    </p>
-
-    <h2>2. Como Usamos as Informações</h2>
-    <ul>
-        <li>Gerenciar contas</li>
-        <li>Gerenciar eventos e listas</li>
-        <li>Permitir interação entre usuários</li>
-        <li>Melhorar o app</li>
-    </ul>
-
-    <h2>3. Compartilhamento de Informações</h2>
-    <p>
-        Os dados não são vendidos. O compartilhamento ocorre apenas quando necessário para funcionamento ou exigido por lei.
-    </p>
-
-    <h2>4. Segurança</h2>
-    <p>
-        Adotamos medidas de segurança para proteger os dados de acesso não autorizado.
-    </p>
-
-    <h2>5. Pagamentos</h2>
-    <p>
-        O pagamento via PIX ocorre externamente. O app não coleta dados financeiros.
-    </p>
-
-    <h2>6. Direitos do Usuário</h2>
-    <ul>
-        <li>Excluir conta e dados</li>
-        <li>Solicitar acesso às informações</li>
-        <li>Corrigir dados</li>
-    </ul>
-
-    <h2>7. Retenção de Dados</h2>
-    <p>
-        Mantemos os dados enquanto necessários ou enquanto a conta estiver ativa.
-    </p>
-
-    <h2>8. Serviços de Terceiros</h2>
-    <p>
-        Podemos utilizar serviços de hospedagem ou análise que possuem políticas próprias.
-    </p>
-
-    <h2>9. Alterações</h2>
-    <p>
-        Esta Política pode ser atualizada periodicamente.
-    </p>
-
-    <h2>10. Contato</h2>
-    <p>
-        Para dúvidas, suporte ou solicitações de privacidade, entre em contato:<br><br>
-        📧 <strong>apps.insilico@gmail.com</strong>
-    </p>
 
 </body>
 </html>
