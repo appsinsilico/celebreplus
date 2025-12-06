@@ -28,7 +28,17 @@
 </head>
 <body>
     <h1>Política de Privacidade – CelebrePlus</h1>
-    <p class="date">Última atualização: ___/___/_____</p>
+    <p>Última atualização: <span id="updateDate"></span></p>
+
+<script>
+    const today = new Date();
+    const formatted =
+        String(today.getDate()).padStart(2, '0') + '/' +
+        String(today.getMonth() + 1).padStart(2, '0') + '/' +
+        today.getFullYear();
+    document.getElementById('updateDate').textContent = formatted;
+</script>
+
 
     <p>
         Agradecemos por utilizar o <strong>CelebrePlus</strong> (“Aplicativo”, “nós”, “nosso”). 
